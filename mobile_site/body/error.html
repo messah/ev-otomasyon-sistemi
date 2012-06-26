@@ -1,0 +1,10 @@
+<?php
+
+  if (g56::exists('SESSION.error')) {
+        echo "<p class = 'img'><strong> " . g56::get('SESSION.error') . "</strong></p>";
+        g56::clear('SESSION.error');
+  }
+
+?>
+<div style = 'background-color:#fff'>
+

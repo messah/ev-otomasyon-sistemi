@@ -1,0 +1,17 @@
+<? ob_start(); ?>
+<br>
+<h2 class="underline">KULLANICI GİRİŞİ</h2>
+
+	<form action = "login.php" method = "POST">
+	<dl>
+		<label for="username">Username :</label>
+		<dd><input type = "text" name = "username"></dd>
+
+		<label for="password">Password :</label>
+		<dd><input type = "password" name = "password"></dd>
+
+		<dd><input class = "subbutton" type = "submit" value = "Giriş"></dd>
+	</dl>
+	</form>
+</div>
+<? ob_flush(); ?>

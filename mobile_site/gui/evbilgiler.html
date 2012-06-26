@@ -1,0 +1,45 @@
+<? ob_start(); ?>
+
+<?php
+g56::get('SESSION.id', $kullanici->id);
+?>
+
+<br>
+<h2 class="table">EV KONTROL SİSTEMİ</h2>
+<br>
+
+    <table>
+      <tr>
+        <td>ÖZELLİK</td>
+        <td>AÇ / KAPAT</td>
+        <td>DURUM</td>             
+      </tr>
+
+      <tr>
+        <td>Kombi</td>
+        <td><form action="kombi.php" method="post">
+    <label><input type="checkbox" name="onay" value="1"/>Değiştir</label>
+    <input type="submit" value="Tamam">
+</form>
+        </td>
+        </form>
+       <td><?php 
+       echo (g56::get('SESSION.kombi') == 1) ? "Açık" : "Kapalı";  
+       ?></td>
+      </tr>      
+      <tr>
+        <td>Klima</td>       		
+        <td><form action="klima.php" method="post">
+    <label><input type="checkbox" name="onay2" value="1"/>Değiştir</label>
+    <input type="submit" value="Tamam">
+</form></td>
+        </form>
+        <td><?php 
+       echo (g56::get('SESSION.klima') == 1) ? "Açık" : "Kapalı";  
+       ?></td>
+      </tr>
+      
+    </table>
+    <br>
+
+<? ob_flush(); ?>
